@@ -56,7 +56,8 @@ SDL_Window* Renderer::getWindow()
 {
 	return gameWindow;
 }
-void Renderer::drawRect(SDL_Rect* rect) {
+void Renderer::drawRect(SDL_Rect* rect)
+{
 	SDL_FillRect(gameSurface, rect, SDL_MapRGB(gameSurface->format, 0, 0, 255));
 }
 void Renderer::clear()
@@ -66,15 +67,18 @@ void Renderer::clear()
 	SDL_SetRenderDrawColor(gameRenderer, 0, 0, 0, 0xFF);
 	SDL_RenderClear(gameRenderer);
 }
-void Renderer::gameUpdate() {
+void Renderer::gameUpdate() 
+{
 	SDL_UpdateWindowSurface(gameWindow);
 }
 
-int Renderer::getScreenHeight() {
+int Renderer::getScreenHeight() 
+{
 	return SCREEN_HEIGTH;
 }
 
-int Renderer::getScreenWidth() {
+int Renderer::getScreenWidth() 
+{
 	return SCREEN_WIDTH;
 }
 
